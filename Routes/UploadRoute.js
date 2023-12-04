@@ -4,10 +4,10 @@ import multer from 'multer'
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, "public/images");
+      cb(file, "public/images");
     },
     filename: (req, file, cb) => {
-      cb(null, req.body.name);
+      cb(file, req.body.name);
     },
   });
 const upload = multer({ storage: storage });
