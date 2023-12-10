@@ -8,7 +8,7 @@
       {
          "handle": "filesystem",
          "src": "/images/(.*)",
-         "destination": "images"
+         "destination": "/images/(.*)"
        },
        { "src": "/(.*)", "dest": "/index.js" }
     ]
